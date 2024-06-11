@@ -4,7 +4,9 @@ import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
 import lombok.*;
 
+import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 @AllArgsConstructor
@@ -39,4 +41,9 @@ public class User {
     @OneToOne(cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
     @JoinColumn(name = "card_id")
     private Cart cart;
+
+    @OneToMany(orphanRemoval = true, cascade = CascadeType.ALL)
+    private final List<Order> orders = new ArrayList<>();
+
+
 }

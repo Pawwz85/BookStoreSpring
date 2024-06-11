@@ -7,8 +7,15 @@
 <body>
 <h1>Witaj na stronie głównej!</h1>
 <p>Jesteś zalogowany.</p>
+<form th:action="@{/books}" method="get">
+    <button type="submit">Przegladaj książki</button>
+</form>
+<form th:action="@{/orders/-1}" method="get">
+    <button type="submit">Historia zamowien</button>
+</form>
 <form th:action="@{/logout}" method="post">
     <button type="submit">Wyloguj się</button>
 </form>
+
 </body>
 </html>

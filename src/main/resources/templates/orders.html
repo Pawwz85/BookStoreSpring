@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Twoje Zamówienia</title>
+</head>
+<body>
+<div>
+    <div th:each="order : ${orders}">
+        <div th:text="${order.id}"></div>
+        <div th:text="${order.date}"></div>
+        <div th:text="${order.status}"></div>
+        <a th:href="@{/order/{orderId}(orderId=${order.id})}">Szczegóły</a>
+    </div>
+</div>
+</body>
+</html>

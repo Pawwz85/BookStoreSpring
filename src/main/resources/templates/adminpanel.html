@@ -7,11 +7,15 @@
 <body>
 <h1>Admin panel!</h1>
 <p>admin.</p>
-<form th:action="@{/logout}" method="post">
-    <button type="submit">Wyloguj się</button>
-</form>
 <form th:action="@{/admin/add_book}" method="get">
     <button type="submit">Dodaj ksiazke</button>
 </form>
+<form th:action="@{/orders/all}" method="get">
+    <button type="submit">Edytuj zamowienia</button>
+</form>
+<form th:action="@{/logout}" method="post">
+    <button type="submit">Wyloguj się</button>
+</form>
+
 </body>
 </html>

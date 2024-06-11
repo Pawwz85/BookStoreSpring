@@ -35,11 +35,13 @@ public class CartService {
                 () -> new RuntimeException("Book not found")
         );
         cart.addItem(book, quantity);
+        saveCart(cart);
     }
     @Transactional
     public void removeFromCard(int bookID){
         Cart cart = getCart();
         cart.removeBookByID(bookID);
+        saveCart(cart);
     }
 
     @Transactional

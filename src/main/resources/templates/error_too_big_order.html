@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Za duże zamówienie</title>
+</head>
+<body>
+<p>Niestety nie udało się zrealizować twojego zamówienia, ponieważ było ono zbyt duże</p>
+<form th:action="@{/cart}" method="get">
+    <button type="submit">Wroć do koszyka</button>
+</form>
+</body>
+</html>
