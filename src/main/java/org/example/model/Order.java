@@ -19,7 +19,6 @@ public class Order {
 
     private Date date;
 
-
     private OrderStatus status;
 
     @OneToMany(mappedBy = "order", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
