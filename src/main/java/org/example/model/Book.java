@@ -20,7 +20,7 @@ public class Book {
     private String title;
     private String author;
     private BigDecimal price;
-
+    private Boolean hidden = Boolean.FALSE;
     public Book(int id){
         this.id = id;
     }

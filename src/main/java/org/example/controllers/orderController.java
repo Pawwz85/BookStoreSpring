@@ -74,6 +74,7 @@ public class orderController {
     public String changeOrderStatus(Model model, @PathVariable long orderId, @RequestParam OrderStatus status){
         Order ord = orderService.getOrder(orderId);
         ord.setStatus(status);
+        orderService.save(ord);
         model.addAttribute("order", ord);
         return "order_admin.html";
     }

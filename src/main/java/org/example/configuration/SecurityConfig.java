@@ -34,6 +34,7 @@ public class SecurityConfig {
                         .requestMatchers("/admin/**").hasAuthority("ADMIN")
                         .requestMatchers("/order/admin/**").hasAuthority("ADMIN")
                         .requestMatchers("/orders/all").hasAuthority("ADMIN")
+                        .requestMatchers("/books/admin/**").hasAuthority("ADMIN")
                         .requestMatchers("/books").permitAll()
                         .anyRequest().hasAnyAuthority("USER", "ADMIN")
 
